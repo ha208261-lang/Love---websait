@@ -1,1 +1,237 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>❤️حنونه</title>
+    <!-- استيراد خطوط جوجل الجميلة والمميزة للغة العربية والإنجليزية الرومانسية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Great+Vibes&family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script>
+      // إخفاء الصورة البديلة للصور غير المرفوعة بعد والاحتفاظ بتناغم التصميم الإبداعي
+      function hidePlaceholder(imgElement) {
+        const placeholder = imgElement.previousElementSibling;
+        if (placeholder && placeholder.classList.contains('image-placeholder')) {
+          placeholder.style.opacity = '0';
+          setTimeout(() => {
+            placeholder.style.display = 'none';
+          }, 500);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- مشغل الصوت المخفي للأغنية الرومانسية -->
+    <audio id="romantic-song" src="song.mp3" loop style="display: none;"></audio>
 
+    <!-- شبكة التدرجات المتحركة بالخلفية -->
+    <div class="bg-gradient-mesh"></div>
+
+    <!-- كانفاس المؤثرات الرومانسية المتساقطة -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <!-- شاشة تسجيل الدخول الزجاجية الفاخرة -->
+    <div class="login-container" id="login-container">
+      <div class="glass-card" id="login-card">
+        <div class="login-header">
+          <h1>حنونه <span class="decorative-heart">❤️</span></h1>
+          <p>أدخلي كلمة المرور السرية لفتح عالم الحب الخاص بنا ✨</p>
+        </div>
+        <form id="login-form" onsubmit="handleLogin(event)">
+          <div class="input-group">
+            <input 
+              type="password" 
+              id="password-input" 
+              placeholder="اكتبِ كلمة المرور هنا..." 
+              autocomplete="current-password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-romantic">دخول إلى قلبك 💖</button>
+          <div class="error-message" id="error-message">دي مش كلمة 7anona🫣 💖</div>
+        </form>
+      </div>
+    </div>
+
+    <!-- المحتوى الرئيسي الفاخر (يظهر بمؤثرات ناعمة بعد الدخول) -->
+    <div class="main-content" id="main-content">
+      <div class="romantic-hub">
+        
+        <!-- عنوان حنونه المتوهج -->
+        <div class="love-title-container">
+          <h1 class="love-title">❤️7anona❤️</h1>
+          <div class="love-subtitle">Our Love Story is Eternal</div>
+        </div>
+
+        <!-- عداد الحب الذي يحسب الأيام والساعات والدقائق والثواني بدقة منذ 5/06/2025 الساعة 12:13 صباحاً -->
+        <div class="counter-card">
+          <div class="counter-card-title">عمر حبنا الجميل 💖</div>
+          <div class="counter-grid">
+            <div class="counter-item">
+              <div class="counter-value" id="days-val">00</div>
+              <div class="counter-label">يوم</div>
+            </div>
+            <div class="counter-item">
+              <div class="counter-value" id="hours-val">00</div>
+              <div class="counter-label">ساعة</div>
+            </div>
+            <div class="counter-item">
+              <div class="counter-value" id="minutes-val">00</div>
+              <div class="counter-label">دقيقة</div>
+            </div>
+            <div class="counter-item">
+              <div class="counter-value" id="seconds-val">00</div>
+              <div class="counter-label">ثانية</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ظرف الرسالة الرومانسي الذي يفتح بلمسة ساحرة -->
+        <div class="envelope-wrapper" id="envelope" onclick="openEnvelope()">
+          <div class="envelope-container">
+            <div class="envelope-flap"></div>
+            <div class="wax-seal"></div>
+            <div class="envelope-pockets"></div>
+            <div class="envelope-bottom"></div>
+            <div class="letter-inside">
+              <h3>حنونه الغالية ❤️</h3>
+              <p>اضغطي لفتح الرسالة كاملة وسماع دقات قلبي...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- زر تشغيل الأغنية الرسمية للحب -->
+        <div class="song-btn-container">
+          <a href="https://youtu.be/LcOGDtgOuOM?si=R-LknJzmJjgyziPE" target="_blank" rel="noopener noreferrer" class="song-btn">
+            <span>🎵 شغلي أغنيتنا ❤️</span>
+          </a>
+        </div>
+
+        <!-- معرض الصور الفني -->
+        <div class="gallery-container">
+          <div class="gallery-header">
+            <h2>معرض لحظاتنا السعيدة</h2>
+          </div>
+          <div class="gallery-grid">
+            
+           <!-- الصورة الأولى -->
+<div class="gallery-item" onclick="openLightbox('IMG-20260718-WA0025.jpg', 'ضحكتك اللي بتنور حياتي ✨')">
+  <div class="image-wrapper">
+    <div class="image-placeholder">❤️<span>IMG-20260718-WA0025</span></div>
+    <img src="IMG-20260718-WA0025.jpg" alt="حنونة الحب" onerror="hidePlaceholder(this)" onload="hidePlaceholder(this)">
+  </div>
+  <div class="gallery-caption">شايفه ايدك منوره ازاي ✨</div>
+</div>
+
+<!-- الصورة الثانية -->
+<div class="gallery-item" onclick="openLightbox('IMG-20260718-WA0027.jpg', 'تفاصيلك الجميلة اللي بحبها 🌸')">
+  <div class="image-wrapper">
+    <div class="image-placeholder">❤️<span>IMG-20260718-WA0027</span></div>
+    <img src="IMG-20260718-WA0027.jpg" alt="تفاصيل حنونة" onerror="hidePlaceholder(this)" onload="hidePlaceholder(this)">
+  </div>
+  <div class="gallery-caption">حنونة الجميلة اللي بحبها 🌸</div>
+</div>
+
+<!-- الصورة الثالثة -->
+<div class="gallery-item" onclick="openLightbox('IMG-20260718-WA0028.jpg', 'معاكي كل ثانية ليها طعم تاني 💞')">
+  <div class="image-wrapper">
+    <div class="image-placeholder">❤️<span>IMG-20260718-WA0028</span></div>
+    <img src="IMG-20260718-WA0028.jpg" alt="لحظات مع حنونة" onerror="hidePlaceholder(this)" onload="hidePlaceholder(this)">
+  </div>
+  <div class="gallery-caption">معاكي كل ثانية ليها طعم تاني 💞</div>
+</div>
+
+<!-- الصورة الرابعة -->
+<div class="gallery-item" onclick="openLightbox('IMG-20260718-WA0036.jpg', 'اليوم ده هيفضل محفور في قلبي 📅')">
+  <div class="image-wrapper">
+    <div class="image-placeholder">❤️<span>IMG-20260718-WA0036</span></div>
+    <img src="IMG-20260718-WA0036.jpg" alt="توثيق اللحظة" onerror="hidePlaceholder(this)" onload="hidePlaceholder(this)">
+  </div>
+  <div class="gallery-caption">اليوم ده هيفضل محفور في قلبي 📅</div>
+</div>
+
+<!-- الصورة الخامسة -->
+<div class="gallery-item" onclick="openLightbox('IMG20260717225049.jpg', 'نظرة عيونك اللي بتنسيني الدنيا 👀❤️')">
+  <div class="image-wrapper">
+    <div class="image-placeholder">❤️<span>IMG20260717225049</span></div>
+    <img src="IMG20260717225049.jpg" alt="نظرة العيون" onerror="hidePlaceholder(this)" onload="hidePlaceholder(this)">
+  </div>
+  <div class="gallery-caption">نظرة عيونك اللي بتنسيني الدنيا 👀❤️</div>
+</div>
+
+<!-- الصورة السادسة -->
+<div class="gallery-item" onclick="openLightbox('IMG_20260528_202159_752.webp', 'روحي وقلبي وكل دنيتي 🌹')">
+  <div class="image-wrapper">
+    <div class="image-placeholder">❤️<span>IMG_20260528_202159_752</span></div>
+    <img src="IMG_20260528_202159_752.webp" alt="روحي وقلبي" onerror="hidePlaceholder(this)" onload="hidePlaceholder(this)">
+  </div>
+  <div class="gallery-caption">روحي وقلبي وكل دنيتي 🌹</div>
+</div>
+
+<!-- الصورة السابعة -->
+<div class="gallery-item" onclick="openLightbox('IMG_20260528_202221_540.webp', 'أجمل ذكرى وأجمل إحساس ❤️')">
+  <div class="image-wrapper">
+    <div class="image-placeholder">❤️<span>IMG_20260528_202221_540</span></div>
+    <img src="IMG_20260528_202221_540.webp" alt="حنونة" onerror="hidePlaceholder(this)" onload="hidePlaceholder(this)">
+  </div>
+  <div class="gallery-caption">أجمل ذكرى وأجمل إحساس ❤️</div>
+</div>
+
+<!-- الصورة الثامنة -->
+<div class="gallery-item" onclick="openLightbox('IMG_20260528_202329_852.webp', 'وجودك في حياتي نعمة كبيرة 💖')">
+  <div class="image-wrapper">
+    <div class="image-placeholder">❤️<span>IMG_20260528_202329_852</span></div>
+    <img src="IMG_20260528_202329_852.webp" alt="حنونة حياتي" onerror="hidePlaceholder(this)" onload="hidePlaceholder(this)">
+  </div>
+  <div class="gallery-caption">وجودك في حياتي نعمة كبيرة 💖</div>
+</div>
+        <!-- تذييل رقيق للموقع مع زر التحميل السحابي المريح للـ ZIP -->
+        <div class="download-zip-btn-container">
+          <a href="project.zip" download="smasemo-love-project.zip" class="download-zip-btn">
+            <span>📦 تحميل كود الموقع كاملاً (ZIP) للرفع على GitHub Pages</span>
+          </a>
+        </div>
+        <footer class="romantic-footer">
+          <p>صنع بكل حب من أجل حنونه ❤️ جميع الأوقات تنبض بذكرى لقائنا.</p>
+        </footer>
+
+      </div>
+    </div>
+
+    <!-- نافذة قراءة الرسالة الشاملة -->
+    <div class="letter-modal" id="letter-modal">
+      <div class="letter-card">
+        <button class="letter-close" onclick="closeLetter()">&times;</button>
+        <div class="letter-text-body" id="letter-text-body"></div>
+      </div>
+    </div>
+
+    <!-- نافذة تكبير الصور الاحترافية (Lightbox) -->
+    <div class="lightbox-modal" id="lightbox-modal">
+      <div class="lightbox-wrapper">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img class="lightbox-image" id="lightbox-image" src="" alt="تكبير الصورة">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <!-- سكريبت الجافاسكريبت التفاعلي الرومانسي الكامل والجاهز للتشغيل المباشر -->
+    <script src="script.js" defer></script>
+    <div style="text-align:center; margin:40px 0;">
+    <a href="smasimo.html" style="
+        display:inline-block;
+        padding:15px 30px;
+        background:#ff4081;
+        color:white;
+        text-decoration:none;
+        border-radius:30px;
+        font-size:22px;
+        font-weight:bold;">
+        💖 بداية اعترافنا
+    </a>
+    </div>
+  </body>
+  </html>
