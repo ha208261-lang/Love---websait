@@ -936,7 +936,6 @@
         triggerBurst(e.clientX, e.clientY);
         playSparkleSound();
       });
-    </script>
     function openEnvelope() {
     const envelope = document.getElementById("envelope");
 
@@ -956,5 +955,27 @@
         }, 500);
     }
 }
-  </body>
+
+// كود العداد هنا
+const confession2Date = new Date("2026-06-30T16:45:00");
+
+function updateCounter2() {
+    const now = new Date();
+    const diff = Math.abs(now - confession2Date);
+
+    document.getElementById("c2-days").textContent =
+        Math.floor(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("c2-hours").textContent =
+        Math.floor(diff / (1000 * 60 * 60)) % 24;
+    document.getElementById("c2-minutes").textContent =
+        Math.floor(diff / (1000 * 60)) % 60;
+    document.getElementById("c2-seconds").textContent =
+        Math.floor(diff / 1000) % 60;
+}
+
+updateCounter2();
+setInterval(updateCounter2, 1000);
+
+</script>
+</body>
 </html>
