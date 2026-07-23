@@ -937,5 +937,24 @@
         playSparkleSound();
       });
     </script>
+    function openEnvelope() {
+    const envelope = document.getElementById("envelope");
+
+    if (envelope.classList.contains("opened")) {
+        envelope.classList.remove("opened");
+    } else {
+        envelope.classList.add("opened");
+
+        setTimeout(() => {
+            alert(`حنونه الغالية ❤️
+
+كل كلمة هنا طالعة من قلبي...
+وجودك فرق معايا بجد، وخلّى أيامي أحلى.
+ربنا يديمك في حياتي ويسعد قلبك زي ما بتسعديني.
+
+❤️`);
+        }, 500);
+    }
+}
   </body>
 </html>
