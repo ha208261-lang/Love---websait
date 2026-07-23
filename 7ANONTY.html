@@ -977,5 +977,58 @@ updateCounter2();
 setInterval(updateCounter2, 1000);
 
 </script>
+    <script>
+// عداد اعترافنا
+const confessionDate = new Date("2026-06-30T16:45:00");
+
+function updateCounter() {
+    const now = new Date();
+    let diff = Math.abs(now - confessionDate);
+
+    const days = Math.floor(diff / 86400000);
+    diff %= 86400000;
+
+    const hours = Math.floor(diff / 3600000);
+    diff %= 3600000;
+
+    const minutes = Math.floor(diff / 60000);
+    diff %= 60000;
+
+    const seconds = Math.floor(diff / 1000);
+
+    document.getElementById("c2-days").textContent = days;
+    document.getElementById("c2-hours").textContent = hours;
+    document.getElementById("c2-minutes").textContent = minutes;
+    document.getElementById("c2-seconds").textContent = seconds;
+}
+
+setInterval(updateCounter,1000);
+updateCounter();
+
+function openEnvelope() {
+    const envelope = document.getElementById("envelope");
+
+    if (!envelope) return;
+
+    if (envelope.classList.contains("opened")) {
+        envelope.classList.remove("opened");
+    } else {
+        envelope.classList.add("opened");
+
+        setTimeout(() => {
+            alert(`حنونه الغالية ❤️
+
+كل كلمة هنا طالعة من قلبي...
+وجودك فرق معايا بجد، وخلّى أيامي أحلى.
+ربنا يديمك في حياتي ويسعد قلبك زي ما بتسعديني.
+
+❤️`);
+        },500);
+    }
+}
+</script>
+
+</body>
+</html>
 </body>
 </html>
